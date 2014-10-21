@@ -1,0 +1,6086 @@
+﻿$axure.loadCurrentPage({
+  "url":"carscreenapplications.html",
+  "generationDate":new Date(1413920306237.97),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable",
+"X",
+"Y",
+"GPSx",
+"GPSy",
+"Prox",
+"Proy",
+"Musicx",
+"Musicy",
+"Newappx",
+"Newappy",
+"Settingsx",
+"Settingsy",
+"swapx",
+"swapy",
+"Customize"],
+  "page":{
+    "packageId":"0be85c77f08f4650b4e0280b5de8ed8f",
+    "type":"Axure:Page",
+    "name":"CarScreenApplications",
+    "notes":{
+      "Instructions":"<p><span>Main Screen Interactions:</span></p><p><span>- Layout customization. You can drag and drop icons and swap locations.</span></p><p><span>- You can click the gps to get to the gps screen prototype</span></p>"},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+      "onLoad":{
+        "description":"OnLoad",
+        "cases":[{
+            "description":"Case 1",
+            "isNewIfGroup":false,
+            "actions":[{
+                "action":"setFunction",
+                "description":"Set value of Customize equal to &quot;0&quot;",
+                "expr":{
+                  "exprType":"block",
+                  "subExprs":[{
+                      "exprType":"fcall",
+                      "functionName":"SetGlobalVariableValue",
+                      "arguments":[{
+                          "exprType":"globalVariableLiteral",
+                          "variableName":"Customize"},
+{
+                          "exprType":"stringLiteral",
+                          "value":"0",
+                          "stos":[]}]}]}}]}]}},
+    "diagram":{
+      "objects":[{
+          "id":"d0af09fa556d46169a13f296aaec45f8",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "size":{
+              "width":982,
+              "height":578}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ddd88192930f41a2845c42e1c15f9483",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "size":{
+                  "width":982,
+                  "height":578}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/carscreenapplications/u0.png"}},
+{
+          "id":"fee2b18c72a54880b8a49a69af85bfd5",
+          "label":"Climate",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":159,
+              "y":128},
+            "size":{
+              "width":148,
+              "height":191}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onDrag":{
+              "description":"OnDrag",
+              "cases":[{
+                  "description":"Case 1<br> (If state of This equals State1 and value of Customize equals &quot;1&quot;)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetPanelState",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+                      "rightExpr":{
+                        "exprType":"panelDiagramLiteral",
+                        "panelPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                        "panelIndex":0}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetGlobalVariableValue",
+                        "arguments":[{
+                            "exprType":"globalVariableLiteral",
+                            "variableName":"Customize"}]},
+                      "rightExpr":{
+                        "exprType":"stringLiteral",
+                        "value":"1",
+                        "stos":[]}}},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This with drag",
+                      "objectsToMoves":[{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"drag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+}}}]}]}]},
+            "onDragDrop":{
+              "description":"OnDragDrop",
+              "cases":[{
+                  "description":"Case 1<br> (If area of This is over area of GPS)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["e123b2df1b9d451b8a3118da1ba6da12"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[GPSx]],[[GPSy]]) linear 500ms,<br>GPS to ([[X]],[[Y]])",
+                      "objectsToMoves":[{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[GPSx]]&quot;, and<br> value of Y equal to &quot;[[GPSy]]&quot;, and<br> value of GPSx equal to &quot;[[swapx]]&quot;, and<br> value of GPSy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 2<br> (Else If area of This is over area of Profile)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["1d673af6df67428784c3ad97144ae4cc"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[prox]],[[proy]]) linear 500ms,<br>Profile to ([[X]],[[Y]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[prox]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[prox]]&quot;, and<br> value of Y equal to &quot;[[proy]]&quot;, and<br> value of Prox equal to &quot;[[swapx]]&quot;, and<br> value of Proy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 3<br> (Else If area of This is over area of Music)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["500802ab6d174c1d949b24adaf331c98"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Musicx]],[[Musicy]]) linear 500ms,<br>Music to ([[X]],[[Y]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[Musicx]]&quot;, and<br> value of Y equal to &quot;[[Musicy]]&quot;, and<br> value of Musicx equal to &quot;[[swapx]]&quot;, and<br> value of Musicy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 4<br> (Else If area of This is over area of New App)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["942bfc7225934c99ab693be59848e104"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Newappx]],[[Newappy]]) linear 500ms,<br>New App to ([[X]],[[Y]])",
+                      "objectsToMoves":[{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[Newappx]]&quot;, and<br> value of Y equal to &quot;[[Newappy]]&quot;, and<br> value of Newappx equal to &quot;[[swapx]]&quot;, and<br> value of Newappy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 5<br> (Else If area of This is over area of Settings)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["d2d433b3f4044afa835eb369391dc5c4"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Settingsx]],[[Settingsy]]) linear 500ms,<br>Settings to ([[X]],[[Y]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[Settingsx]]&quot;, and<br> value of Y equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 6<br> (Else If True)",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to x,y before drag linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"locationBeforeDrag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]}]}]},
+            "onLoad":{
+              "description":"OnLoad",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[This.x]]&quot;, and<br> value of Y equal to &quot;[[This.y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.x]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.y]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"y"}]}]}]}}]}]}},
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"303b488a01dc46c9bd2fadee2a02e715",
+              "label":"State1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"906ae8a74d054f86abc2d393df3dd70a",
+                  "label":"",
+                  "parentDynamicPanel":"fee2b18c72a54880b8a49a69af85bfd5",
+                  "panelIndex":0,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"58bfdb92244a407091d1f73957d75f47",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"fee2b18c72a54880b8a49a69af85bfd5",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"Case 1<br> (If value of Customize equals &quot;0&quot;)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetGlobalVariableValue",
+                              "arguments":[{
+                                  "exprType":"globalVariableLiteral",
+                                  "variableName":"Customize"}]},
+                            "rightExpr":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]}},
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"Set Climate to State2",
+                              "panelsToStates":[{
+                                  "panelPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":2,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]},
+                    "onMouseUp":{
+                      "description":"OnMouseUp",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"Set value of Customize equal to &quot;0&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetGlobalVariableValue",
+                                    "arguments":[{
+                                        "exprType":"globalVariableLiteral",
+                                        "variableName":"Customize"},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"0",
+                                        "stos":[]}]}]}}]}]},
+                    "onLongClick":{
+                      "description":"OnLongClick",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"Set value of Customize equal to &quot;1&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetGlobalVariableValue",
+                                    "arguments":[{
+                                        "exprType":"globalVariableLiteral",
+                                        "variableName":"Customize"},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"1",
+                                        "stos":[]}]}]}}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/carscreenapplications/u3.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"291ee2192c674e23980eba4debf10bb5",
+              "label":"State2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"b0baa3780ff34e36b83dae46e5989eb6",
+                  "label":"",
+                  "parentDynamicPanel":"fee2b18c72a54880b8a49a69af85bfd5",
+                  "panelIndex":1,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"f52ddbaab84a494c804679bf5471a052",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"fee2b18c72a54880b8a49a69af85bfd5",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onMouseUp":{
+                      "description":"OnMouseUp",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"Set Climate to State1",
+                              "panelsToStates":[{
+                                  "panelPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]},
+                    "onMouseOut":{
+                      "description":"OnMouseOut",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"Set Climate to State1",
+                              "panelsToStates":[{
+                                  "panelPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "images":{
+                    "normal~":"images/carscreenapplications/u5.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"e123b2df1b9d451b8a3118da1ba6da12",
+          "label":"GPS",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":432,
+              "y":128},
+            "size":{
+              "width":148,
+              "height":191}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onDrag":{
+              "description":"OnDrag",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This with drag",
+                      "objectsToMoves":[{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"drag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+}}}]}]}]},
+            "onDragDrop":{
+              "description":"OnDragDrop",
+              "cases":[{
+                  "description":"Case 1<br> (If area of This is over area of Climate)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["fee2b18c72a54880b8a49a69af85bfd5"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[X]],[[Y]]) linear 500ms,<br>Climate to ([[GPSx]],[[GPSy]])",
+                      "objectsToMoves":[{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[GPSx]]&quot;, and<br> value of Y equal to &quot;[[GPSy]]&quot;, and<br> value of GPSx equal to &quot;[[swapx]]&quot;, and<br> value of GPSy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 2<br> (Else If area of This is over area of Profile)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["1d673af6df67428784c3ad97144ae4cc"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Prox]],[[Proy]]) linear 500ms,<br>Profile to ([[GPSx]],[[GPSy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Prox]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Prox]]&quot;, and<br> value of swapy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[GPSx]]&quot;, and<br> value of Proy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[swapx]]&quot;, and<br> value of GPSy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 3<br> (Else If area of This is over area of Music)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["500802ab6d174c1d949b24adaf331c98"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Musicx]],[[Musicy]]) linear 500ms,<br>Music to ([[GPSx]],[[GPSy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[GPSx]]&quot;, and<br> value of swapy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[Musicx]]&quot;, and<br> value of GPSy equal to &quot;[[Musicy]]&quot;, and<br> value of Musicx equal to &quot;[[swapx]]&quot;, and<br> value of Musicy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 4<br> (Else If area of This is over area of New App)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["942bfc7225934c99ab693be59848e104"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Newappx]],[[Newappy]]) linear 500ms,<br>New App to ([[GPsx]],[[GPSy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPsx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[GPSx]]&quot;, and<br> value of swapy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[Newappx]]&quot;, and<br> value of GPSy equal to &quot;[[Newappy]]&quot;, and<br> value of Newappx equal to &quot;[[swapx]]&quot;, and<br> value of Newappy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 5<br> (Else If area of This is over area of Settings)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["d2d433b3f4044afa835eb369391dc5c4"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Settingsx]],[[Settingsy]]) linear 500ms,<br>Settings to ([[GPSx]],[[GPSy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[GPSx]]&quot;, and<br> value of swapy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[Settingsx]]&quot;, and<br> value of GPSy equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 6<br> (Else If True)",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to x,y before drag linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"locationBeforeDrag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]}]}]},
+            "onLoad":{
+              "description":"OnLoad",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[This.x]]&quot;, and<br> value of GPSy equal to &quot;[[This.y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.x]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.y]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"y"}]}]}]}}]}]}},
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"ba80a8df8d824de8879926bdb02df879",
+              "label":"State1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"9cbd4bcf1bc1410d950453046424c815",
+                  "label":"",
+                  "parentDynamicPanel":"e123b2df1b9d451b8a3118da1ba6da12",
+                  "panelIndex":0,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"2ad6fa40636047ebb992eac8401f44dd",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"e123b2df1b9d451b8a3118da1ba6da12",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"Case 1<br> (If value of Customize equals &quot;0&quot;)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetGlobalVariableValue",
+                              "arguments":[{
+                                  "exprType":"globalVariableLiteral",
+                                  "variableName":"Customize"}]},
+                            "rightExpr":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]}},
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"Set GPS to State2",
+                              "panelsToStates":[{
+                                  "panelPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":2,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"linkWindow",
+                              "description":"Open GPS in Current Window",
+                              "target":{
+                                "targetType":"page",
+                                "url":"gps.html",
+                                "includeVariables":true},
+                              "linkType":"current"},
+{
+                              "action":"setFunction",
+                              "description":"Set value of Customize equal to &quot;0&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetGlobalVariableValue",
+                                    "arguments":[{
+                                        "exprType":"globalVariableLiteral",
+                                        "variableName":"Customize"},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"0",
+                                        "stos":[]}]}]}}]}]},
+                    "onLongClick":{
+                      "description":"OnLongClick",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"Set value of Customize equal to &quot;1&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetGlobalVariableValue",
+                                    "arguments":[{
+                                        "exprType":"globalVariableLiteral",
+                                        "variableName":"Customize"},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"1",
+                                        "stos":[]}]}]}}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/carscreenapplications/u8.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"41718a37a42540ec93451faa71382ddc",
+              "label":"State2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"89c98eb0f12f4152ab63f20258149f07",
+                  "label":"",
+                  "parentDynamicPanel":"e123b2df1b9d451b8a3118da1ba6da12",
+                  "panelIndex":1,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"426aa0e038eb4357844f33d6a3d0a1f0",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"e123b2df1b9d451b8a3118da1ba6da12",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"linkWindow",
+                              "description":"Open GPS in Current Window",
+                              "target":{
+                                "targetType":"page",
+                                "url":"gps.html",
+                                "includeVariables":true},
+                              "linkType":"current"}]}]},
+                    "onMouseUp":{
+                      "description":"OnMouseUp",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"linkWindow",
+                              "description":"Open GPS in Current Window",
+                              "target":{
+                                "targetType":"page",
+                                "url":"gps.html",
+                                "includeVariables":true},
+                              "linkType":"current"}]}]},
+                    "onMouseOut":{
+                      "description":"OnMouseOut",
+                      "cases":[{
+                          "description":"Case 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"Set GPS to State1",
+                              "panelsToStates":[{
+                                  "panelPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/carscreenapplications/u10.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"1d673af6df67428784c3ad97144ae4cc",
+          "label":"Profile",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":705,
+              "y":128},
+            "size":{
+              "width":148,
+              "height":191}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onDrag":{
+              "description":"OnDrag",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This with drag",
+                      "objectsToMoves":[{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"drag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+}}}]}]}]},
+            "onDragDrop":{
+              "description":"OnDragDrop",
+              "cases":[{
+                  "description":"Case 1<br> (If area of This is over area of GPS)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["e123b2df1b9d451b8a3118da1ba6da12"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[GPSx]],[[GPSy]]) linear 500ms,<br>GPS to ([[Prox]],[[Proy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Prox]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Prox]]&quot;, and<br> value of swapy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[GPSx]]&quot;, and<br> value of Proy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[swapx]]&quot;, and<br> value of GPSy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 2<br> (Else If area of This is over area of Climate)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["fee2b18c72a54880b8a49a69af85bfd5"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[X]],[[Y]]) linear 500ms,<br>Climate to ([[Prox]],[[Proy]])",
+                      "objectsToMoves":[{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Prox]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[prox]]&quot;, and<br> value of Y equal to &quot;[[proy]]&quot;, and<br> value of Prox equal to &quot;[[swapx]]&quot;, and<br> value of Proy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 3<br> (Else If area of This is over area of Music)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["500802ab6d174c1d949b24adaf331c98"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Musicx]],[[Musicy]]) linear 500ms,<br>Music to ([[Prox]],[[Proy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Prox]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Prox]]&quot;, and<br> value of swapy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[Musicx]]&quot;, and<br> value of Proy equal to &quot;[[Musicy]]&quot;, and<br> value of Musicx equal to &quot;[[swapx]]&quot;, and<br> value of Musicy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 4<br> (Else If area of This is over area of New App)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["942bfc7225934c99ab693be59848e104"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Newappx]],[[Newappy]]) linear 500ms,<br>New App to ([[Prox]],[[Proy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Prox]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Prox]]&quot;, and<br> value of swapy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[Newappx]]&quot;, and<br> value of Proy equal to &quot;[[Newappy]]&quot;, and<br> value of Newappx equal to &quot;[[swapx]]&quot;, and<br> value of Newappy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 5<br> (Else If area of This is over area of Settings)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["d2d433b3f4044afa835eb369391dc5c4"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Settingsx]],[[Settingsy]]) linear 500ms,<br>Settings to ([[Prox]],[[Proy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Prox]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Prox]]&quot;, and<br> value of swapy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[Settingsx]]&quot;, and<br> value of Proy equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 6<br> (Else If True)",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to x,y before drag linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"locationBeforeDrag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]}]}]},
+            "onLoad":{
+              "description":"OnLoad",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[This.x]]&quot;, and<br> value of Proy equal to &quot;[[This.y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.x]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.y]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"y"}]}]}]}}]}]}},
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"478657c10263467298056fcdb95ce7f3",
+              "label":"State1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"b6707349a9674f5d9ccfc1404a8b5979",
+                  "label":"Profile",
+                  "parentDynamicPanel":"1d673af6df67428784c3ad97144ae4cc",
+                  "panelIndex":0,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"995c8acefd164202b6501c4ee119aa56",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"1d673af6df67428784c3ad97144ae4cc",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/profile_u13.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"70f3aa219913487198d30e6dff7e1ccb",
+              "label":"State2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"a8d9c31bc3ba445a93b3cde0e1b580c2",
+                  "label":"",
+                  "parentDynamicPanel":"1d673af6df67428784c3ad97144ae4cc",
+                  "panelIndex":1,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"6edca0007ea345aa8bfa93235dd4a515",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"1d673af6df67428784c3ad97144ae4cc",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/u15.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"500802ab6d174c1d949b24adaf331c98",
+          "label":"Music",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":157,
+              "y":343},
+            "size":{
+              "width":148,
+              "height":191}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onDrag":{
+              "description":"OnDrag",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This with drag",
+                      "objectsToMoves":[{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"drag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+}}}]}]}]},
+            "onDragDrop":{
+              "description":"OnDragDrop",
+              "cases":[{
+                  "description":"Case 1<br> (If area of This is over area of GPS)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["e123b2df1b9d451b8a3118da1ba6da12"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[GPSx]],[[GPSy]]) linear 500ms,<br>GPS to ([[Musicx]],[[Musicy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Musicx]]&quot;, and<br> value of swapy equal to &quot;[[Musicy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Musicx equal to &quot;[[GPSx]]&quot;, and<br> value of Musicy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[swapx]]&quot;, and<br> value of GPSy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 2<br> (Else If area of This is over area of Profile)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["1d673af6df67428784c3ad97144ae4cc"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[prox]],[[proy]]) linear 500ms,<br>Profile to ([[Musicx]],[[Musicy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[prox]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Musicx]]&quot;, and<br> value of swapy equal to &quot;[[Musicy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Musicx equal to &quot;[[Prox]]&quot;, and<br> value of Musicy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[swapx]]&quot;, and<br> value of Proy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 3<br> (Else If area of This is over area of Climate)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["fee2b18c72a54880b8a49a69af85bfd5"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[X]],[[Y]]) linear 500ms,<br>Climate to ([[Musicx]],[[Musicy]])",
+                      "objectsToMoves":[{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[Musicx]]&quot;, and<br> value of Y equal to &quot;[[Musicy]]&quot;, and<br> value of Musicx equal to &quot;[[swapx]]&quot;, and<br> value of Musicy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 4<br> (Else If area of This is over area of New App)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["942bfc7225934c99ab693be59848e104"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Newappx]],[[Newappy]]) linear 500ms,<br>New App to ([[Musicx]],[[Musicy]])",
+                      "objectsToMoves":[{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Musicx]]&quot;, and<br> value of swapy equal to &quot;[[Musicy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Musicx equal to &quot;[[Newappx]]&quot;, and<br> value of Musicy equal to &quot;[[Newappy]]&quot;, and<br> value of Newappx equal to &quot;[[swapx]]&quot;, and<br> value of Newappy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 5<br> (Else If area of This is over area of Settings)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["d2d433b3f4044afa835eb369391dc5c4"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Settingsx]],[[Settingsy]]) linear 500ms,<br>Settings to ([[Musicx]],[[Musicy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Musicx]]&quot;, and<br> value of swapy equal to &quot;[[Musicy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Musicx equal to &quot;[[Settingsx]]&quot;, and<br> value of Musicy equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 6<br> (Else If True)",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to x,y before drag linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"locationBeforeDrag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]}]}]},
+            "onLoad":{
+              "description":"OnLoad",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"Set value of Musicx equal to &quot;[[This.x]]&quot;, and<br> value of Musicy equal to &quot;[[This.y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.x]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.y]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"y"}]}]}]}}]}]}},
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"c09bb61c20404c08af2a3eddc504fa69",
+              "label":"State1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"0239aadd32614efb921737e7abf5e579",
+                  "label":"",
+                  "parentDynamicPanel":"500802ab6d174c1d949b24adaf331c98",
+                  "panelIndex":0,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"e055ad5c8635423db3cd60b0d5398301",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"500802ab6d174c1d949b24adaf331c98",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/u18.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"d6b1066ce6664fc998f4d0422ee64acd",
+              "label":"State2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"dd1079a4c5ce4da6a1e4a6723d6c24b5",
+                  "label":"",
+                  "parentDynamicPanel":"500802ab6d174c1d949b24adaf331c98",
+                  "panelIndex":1,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"0dc55eb84cde4f53b7935f9d29a65385",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"500802ab6d174c1d949b24adaf331c98",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/u20.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"942bfc7225934c99ab693be59848e104",
+          "label":"New App",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":431,
+              "y":343},
+            "size":{
+              "width":148,
+              "height":191}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onDrag":{
+              "description":"OnDrag",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This with drag",
+                      "objectsToMoves":[{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"drag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+}}}]}]}]},
+            "onDragDrop":{
+              "description":"OnDragDrop",
+              "cases":[{
+                  "description":"Case 1<br> (If area of This is over area of GPS)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["e123b2df1b9d451b8a3118da1ba6da12"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[GPSx]],[[GPSy]]) linear 500ms,<br>GPS to ([[Newappx]],[[Newappy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Newappx]]&quot;, and<br> value of swapy equal to &quot;[[Newappy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Newappx equal to &quot;[[GPSx]]&quot;, and<br> value of Newappy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[swapx]]&quot;, and<br> value of GPSy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 2<br> (Else If area of This is over area of Profile)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["1d673af6df67428784c3ad97144ae4cc"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[prox]],[[proy]]) linear 500ms,<br>Profile to ([[Newappx]],[[Newappy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[prox]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Newappx]]&quot;, and<br> value of swapy equal to &quot;[[Newappy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Newappx equal to &quot;[[Prox]]&quot;, and<br> value of Newappy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[swapx]]&quot;, and<br> value of Proy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 3<br> (Else If area of This is over area of Climate)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["fee2b18c72a54880b8a49a69af85bfd5"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[X]],[[Y]]) linear 500ms,<br>Climate to ([[Newappx]],[[Newappy]])",
+                      "objectsToMoves":[{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[Newappx]]&quot;, and<br> value of Y equal to &quot;[[Newappy]]&quot;, and<br> value of Newappx equal to &quot;[[swapx]]&quot;, and<br> value of Newappy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 4<br> (Else If area of This is over area of Music)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["500802ab6d174c1d949b24adaf331c98"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Musicx]],[[Musicy]]) linear 500ms,<br>Music to ([[Newappx]],[[Newappy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Musicx]]&quot;, and<br> value of swapy equal to &quot;[[Musicy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Musicx equal to &quot;[[Newappx]]&quot;, and<br> value of Musicy equal to &quot;[[Newappy]]&quot;, and<br> value of Newappx equal to &quot;[[swapx]]&quot;, and<br> value of Newappy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 5<br> (Else If area of This is over area of Settings)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["d2d433b3f4044afa835eb369391dc5c4"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Settingsx]],[[Settingsy]]) linear 500ms,<br>Settings to ([[Newappx]],[[Newappy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Newappx]]&quot;, and<br> value of swapy equal to &quot;[[Newappy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Newappx equal to &quot;[[Settingsx]]&quot;, and<br> value of Newappy equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 6<br> (Else If True)",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to x,y before drag linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"locationBeforeDrag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]}]}]},
+            "onLoad":{
+              "description":"OnLoad",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"Set value of Newappx equal to &quot;[[This.x]]&quot;, and<br> value of Newappy equal to &quot;[[This.y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.x]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.y]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"y"}]}]}]}}]}]}},
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"877b462e230d44f5bd7bfff2860de554",
+              "label":"State1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"9db37cc2cf064b9897fb27ca33123134",
+                  "label":"",
+                  "parentDynamicPanel":"942bfc7225934c99ab693be59848e104",
+                  "panelIndex":0,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"8947b96db00a4c40ba83d4d6293daf63",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"942bfc7225934c99ab693be59848e104",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/u23.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"bbc680c453154aa1ab5c05bea365c2dd",
+              "label":"State2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"da4d377536a043079247c50b9a1d81ed",
+                  "label":"",
+                  "parentDynamicPanel":"942bfc7225934c99ab693be59848e104",
+                  "panelIndex":1,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"c99704b0ea3b4604bfec67117e941a21",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"942bfc7225934c99ab693be59848e104",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/u25.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"d2d433b3f4044afa835eb369391dc5c4",
+          "label":"Settings",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":705,
+              "y":343},
+            "size":{
+              "width":148,
+              "height":191}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onDrag":{
+              "description":"OnDrag",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This with drag",
+                      "objectsToMoves":[{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"drag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+}}}]}]}]},
+            "onDragDrop":{
+              "description":"OnDragDrop",
+              "cases":[{
+                  "description":"Case 1<br> (If area of This is over area of GPS)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["e123b2df1b9d451b8a3118da1ba6da12"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[GPSx]],[[GPSy]]) linear 500ms,<br>GPS to ([[Settingsx]],[[Settingsy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[GPSy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"gpsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["e123b2df1b9d451b8a3118da1ba6da12"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Settingsx]]&quot;, and<br> value of swapy equal to &quot;[[Settingsy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Settingsx equal to &quot;[[GPSx]]&quot;, and<br> value of Settingsy equal to &quot;[[GPSy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[GPSy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"gpsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of GPSx equal to &quot;[[swapx]]&quot;, and<br> value of GPSy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"GPSy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 2<br> (Else If area of This is over area of Profile)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["1d673af6df67428784c3ad97144ae4cc"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[prox]],[[proy]]) linear 500ms,<br>Profile to ([[Settingsx]],[[Settingsy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[prox]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"prox"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[proy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"proy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["1d673af6df67428784c3ad97144ae4cc"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Settingsx]]&quot;, and<br> value of swapy equal to &quot;[[Settingsy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Settingsx equal to &quot;[[Prox]]&quot;, and<br> value of Settingsy equal to &quot;[[Proy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Prox]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"prox"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Proy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"proy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Prox equal to &quot;[[swapx]]&quot;, and<br> value of Proy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Prox"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Proy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 3<br> (Else If area of This is over area of Climate)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["fee2b18c72a54880b8a49a69af85bfd5"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[X]],[[Y]]) linear 500ms,<br>Climate to ([[Settingsx]],[[Settingsy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[X]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"x"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Y]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"y"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["fee2b18c72a54880b8a49a69af85bfd5"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[X]]&quot;, and<br> value of swapy equal to &quot;[[Y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[X]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Y]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"y"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of X equal to &quot;[[Settingsx]]&quot;, and<br> value of Y equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"X"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Y"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 4<br> (Else If area of This is over area of Music)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["500802ab6d174c1d949b24adaf331c98"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Musicx]],[[Musicy]]) linear 500ms,<br>Music to ([[Settingsx]],[[Settingsy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Musicy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"musicy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["500802ab6d174c1d949b24adaf331c98"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Musicx]]&quot;, and<br> value of swapy equal to &quot;[[Musicy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Musicy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"musicy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Musicx equal to &quot;[[Settingsx]]&quot;, and<br> value of Musicy equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Musicy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 5<br> (Else If area of This is over area of New App)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"fcall",
+                    "functionName":"IsOver",
+                    "arguments":[{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":true,
+                            "isFocused":false,
+                            "isTarget":false}]},
+{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetRectangles",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["942bfc7225934c99ab693be59848e104"]}]}]},
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to ([[Newappx]],[[Newappy]]) linear 500ms,<br>New App to ([[Settingsx]],[[Settingsy]]) linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappx]]",
+                              "localVariables":{
+},
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Newappy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"newappy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}},
+{
+                          "objectPath":["942bfc7225934c99ab693be59848e104"],
+                          "moveInfo":{
+                            "moveType":"location",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsx]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsx"}]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"[[Settingsy]]",
+                              "stos":[{
+                                  "sto":"var",
+                                  "name":"settingsy"}]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]},
+{
+                      "action":"setFunction",
+                      "description":"Set value of swapx equal to &quot;[[Newappx]]&quot;, and<br> value of swapy equal to &quot;[[Newappy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"swapy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Newappy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"newappy"}]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"Set value of Newappx equal to &quot;[[Settingsx]]&quot;, and<br> value of Newappy equal to &quot;[[Settingsy]]&quot;, and<br> value of Settingsx equal to &quot;[[swapx]]&quot;, and<br> value of Settingsy equal to &quot;[[swapy]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Newappy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[Settingsy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"settingsy"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapx]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapx"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[swapy]]",
+                                "stos":[{
+                                    "sto":"var",
+                                    "name":"swapy"}]}]}]}}]},
+{
+                  "description":"Case 6<br> (Else If True)",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"moveWidget",
+                      "description":"Move This to x,y before drag linear 500ms",
+                      "objectsToMoves":[{
+                          "objectPath":["d2d433b3f4044afa835eb369391dc5c4"],
+                          "moveInfo":{
+                            "moveType":"locationBeforeDrag",
+                            "xValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "yValue":{
+                              "exprType":"stringLiteral",
+                              "value":"0",
+                              "stos":[]},
+                            "options":{
+                              "easing":"linear",
+                              "duration":500}}}]}]}]},
+            "onLoad":{
+              "description":"OnLoad",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"Set value of Settingsx equal to &quot;[[This.x]]&quot;, and<br> value of Settingsy equal to &quot;[[This.y]]&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsx"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.x]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"x"}]}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetGlobalVariableValue",
+                            "arguments":[{
+                                "exprType":"globalVariableLiteral",
+                                "variableName":"Settingsy"},
+{
+                                "exprType":"stringLiteral",
+                                "value":"[[This.y]]",
+                                "stos":[{
+                                    "computedType":"int",
+                                    "sto":"propCall",
+                                    "thisSTO":{
+                                      "sto":"var",
+                                      "name":"this"},
+                                    "prop":"y"}]}]}]}}]}]}},
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"1503a9df24d24d87822a4a40888cffdf",
+              "label":"State1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"f58e28f6306c47cb924715df1015095f",
+                  "label":"",
+                  "parentDynamicPanel":"d2d433b3f4044afa835eb369391dc5c4",
+                  "panelIndex":0,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"aaca234cda0b4489a235bd58f3c0cbbe",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"d2d433b3f4044afa835eb369391dc5c4",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/u28.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"5ee295aab9d7479f979092ffde645654",
+              "label":"State2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"04fcee8d2968459c86806bfa108a03be",
+                  "label":"",
+                  "parentDynamicPanel":"d2d433b3f4044afa835eb369391dc5c4",
+                  "panelIndex":1,
+                  "type":"imageBox",
+                  "styleType":"imageBox",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":148,
+                      "height":191}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"919e5f072d644753ad2eafbd03a01ad8",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"d2d433b3f4044afa835eb369391dc5c4",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":148,
+                          "height":191}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/carscreenapplications/u30.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "d0af09fa556d46169a13f296aaec45f8":{
+      "scriptId":"u0"},
+    "ddd88192930f41a2845c42e1c15f9483":{
+      "scriptId":"u1"},
+    "fee2b18c72a54880b8a49a69af85bfd5":{
+      "scriptId":"u2"},
+    "906ae8a74d054f86abc2d393df3dd70a":{
+      "scriptId":"u3"},
+    "58bfdb92244a407091d1f73957d75f47":{
+      "scriptId":"u4"},
+    "b0baa3780ff34e36b83dae46e5989eb6":{
+      "scriptId":"u5"},
+    "f52ddbaab84a494c804679bf5471a052":{
+      "scriptId":"u6"},
+    "e123b2df1b9d451b8a3118da1ba6da12":{
+      "scriptId":"u7"},
+    "9cbd4bcf1bc1410d950453046424c815":{
+      "scriptId":"u8"},
+    "2ad6fa40636047ebb992eac8401f44dd":{
+      "scriptId":"u9"},
+    "89c98eb0f12f4152ab63f20258149f07":{
+      "scriptId":"u10"},
+    "426aa0e038eb4357844f33d6a3d0a1f0":{
+      "scriptId":"u11"},
+    "1d673af6df67428784c3ad97144ae4cc":{
+      "scriptId":"u12"},
+    "b6707349a9674f5d9ccfc1404a8b5979":{
+      "scriptId":"u13"},
+    "995c8acefd164202b6501c4ee119aa56":{
+      "scriptId":"u14"},
+    "a8d9c31bc3ba445a93b3cde0e1b580c2":{
+      "scriptId":"u15"},
+    "6edca0007ea345aa8bfa93235dd4a515":{
+      "scriptId":"u16"},
+    "500802ab6d174c1d949b24adaf331c98":{
+      "scriptId":"u17"},
+    "0239aadd32614efb921737e7abf5e579":{
+      "scriptId":"u18"},
+    "e055ad5c8635423db3cd60b0d5398301":{
+      "scriptId":"u19"},
+    "dd1079a4c5ce4da6a1e4a6723d6c24b5":{
+      "scriptId":"u20"},
+    "0dc55eb84cde4f53b7935f9d29a65385":{
+      "scriptId":"u21"},
+    "942bfc7225934c99ab693be59848e104":{
+      "scriptId":"u22"},
+    "9db37cc2cf064b9897fb27ca33123134":{
+      "scriptId":"u23"},
+    "8947b96db00a4c40ba83d4d6293daf63":{
+      "scriptId":"u24"},
+    "da4d377536a043079247c50b9a1d81ed":{
+      "scriptId":"u25"},
+    "c99704b0ea3b4604bfec67117e941a21":{
+      "scriptId":"u26"},
+    "d2d433b3f4044afa835eb369391dc5c4":{
+      "scriptId":"u27"},
+    "f58e28f6306c47cb924715df1015095f":{
+      "scriptId":"u28"},
+    "aaca234cda0b4489a235bd58f3c0cbbe":{
+      "scriptId":"u29"},
+    "04fcee8d2968459c86806bfa108a03be":{
+      "scriptId":"u30"},
+    "919e5f072d644753ad2eafbd03a01ad8":{
+      "scriptId":"u31"}}});

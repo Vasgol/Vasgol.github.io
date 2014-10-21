@@ -13,9 +13,9 @@
     "loadFeedbackPlugin":false},
   "sitemap":{
     "rootNodes":[{
-        "pageName":"Main",
+        "pageName":"Mobile Main",
         "type":"Wireframe",
-        "url":"main.html",
+        "url":"mobile_main.html",
         "children":[{
             "pageName":"Profile",
             "type":"Wireframe",
@@ -31,9 +31,32 @@
 {
                 "pageName":"Schedule_month",
                 "type":"Wireframe",
-                "url":"schedule_month.html"}]}]}]},
+                "url":"schedule_month.html"}]}]},
+{
+        "pageName":"CarScreenApplications",
+        "type":"Wireframe",
+        "url":"carscreenapplications.html",
+        "children":[{
+            "pageName":"GPS",
+            "type":"Wireframe",
+            "url":"gps.html"}]}]},
   "globalVariables":{
-    "onloadvariable":""},
+    "onloadvariable":"",
+    "x":"",
+    "y":"",
+    "gpsx":"",
+    "gpsy":"",
+    "prox":"",
+    "proy":"",
+    "musicx":"",
+    "musicy":"",
+    "newappx":"",
+    "newappy":"",
+    "settingsx":"",
+    "settingsy":"",
+    "swapx":"",
+    "swapy":"",
+    "customize":""},
   "defaultAdaptiveView":{
     "name":"",
     "size":{
@@ -590,9 +613,25 @@
         "limbo":false},
       "hyperlinkMouseOver":{
         "id":"9cbc3f1e4fb44236bc911c5bac4798a0",
-        "underline":true},
+        "underline":true,
+        "location":{
+          "x":0,
+          "y":0},
+        "size":{
+          "width":0,
+          "height":0},
+        "visible":true,
+        "limbo":false},
       "hyperlinkMouseDown":{
-        "id":"eb22b344417748a5b5e1255394e83723"},
+        "id":"eb22b344417748a5b5e1255394e83723",
+        "location":{
+          "x":0,
+          "y":0},
+        "size":{
+          "width":0,
+          "height":0},
+        "visible":true,
+        "limbo":false},
       "textBox":{
         "id":"e1c811464757403c81a0dadad930f390",
         "fontName":"'Arial Regular', 'Arial'",
@@ -719,7 +758,7 @@
         "fontStyle":"normal",
         "underline":false,
         "horizontalAlignment":"left",
-        "verticalAlignment":"top",
+        "verticalAlignment":"middle",
         "foreGroundFill":{
           "fillType":"solid",
           "color":0xFF000000,
@@ -778,7 +817,7 @@
         "fontStyle":"normal",
         "underline":false,
         "horizontalAlignment":"left",
-        "verticalAlignment":"top",
+        "verticalAlignment":"middle",
         "foreGroundFill":{
           "fillType":"solid",
           "color":0xFF000000,

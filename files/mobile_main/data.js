@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
-  "url":"schedule_day_2.html",
-  "generationDate":new Date(1413920306085.31),
+  "url":"mobile_main.html",
+  "generationDate":new Date(1413920305974.65),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
 "X",
@@ -19,11 +19,11 @@
 "swapy",
 "Customize"],
   "page":{
-    "packageId":"69db174b7f724d2fa089581319cfb248",
+    "packageId":"3ac908ce7c5348aba8fbffccccdbd890",
     "type":"Axure:Page",
-    "name":"Schedule_day_2",
+    "name":"Mobile Main",
     "notes":{
-      "Instructions":"<p><span>Schedule Screen</span></p><p><span>&nbsp; - Specific schedule a short description is displayed</span></p><p><span>&nbsp; - User can change time, title, and description</span></p><p><span>&nbsp; - User will set which personal preferences should be displayed at this schedule</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - So when the schedule is uploaded on the car and the user clicks the profile icon</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; on the gps screen only work and family locations are displayed between 7:30-8:30</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - Radio will be used this time with the specific station set by the user through the personal settings screen</span></p><p><span>&nbsp;&nbsp; - Clicking month opens the month screen</span></p>"},
+      "Instructions":"<p><span>Volvo Profile Home Screen </span></p><p><span>&nbsp; - Click Profile to open the personal settings screen</span></p><p><span>&nbsp; - Click Schedule to open the personal schedule screen</span></p>"},
     "style":{
       "baseStyle":"627587b6038d43cca051c114ac41ad32",
       "pageAlignment":"near",
@@ -45,7 +45,7 @@
 },
     "diagram":{
       "objects":[{
-          "id":"7de4aac665434e2bb9454f928e4889b2",
+          "id":"445f015174c74b309780998cf882d72d",
           "label":"",
           "type":"imageBox",
           "styleType":"imageBox",
@@ -57,7 +57,7 @@
           "adaptiveStyles":{
 },
           "objects":[{
-              "id":"df49a48343c74072bb19e3f546fe89e2",
+              "id":"c581e310e7794e83ae477d4361d7deac",
               "label":"",
               "isContained":true,
               "type":"richTextPanel",
@@ -70,20 +70,20 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/schedule_day_2/u0.png"}},
+            "normal~":"images/mobile_main/u0.jpg"}},
 {
-          "id":"9529e27e644e43449c7cb25553e31a00",
-          "label":"Month",
+          "id":"36fa7536fd944895b9bd40886bd78bb5",
+          "label":"Profile",
           "type":"dynamicPanel",
           "styleType":"dynamicPanel",
           "visible":true,
           "style":{
             "location":{
-              "x":236,
-              "y":66},
+              "x":19,
+              "y":510.000030517578},
             "size":{
-              "width":106,
-              "height":40}},
+              "width":87,
+              "height":30}},
           "adaptiveStyles":{
 },
           "interactionMap":{
@@ -94,10 +94,10 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"Open Schedule_month in Current Window",
+                      "description":"Open Profile in Current Window",
                       "target":{
                         "targetType":"page",
-                        "url":"schedule_month.html",
+                        "url":"profile.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
@@ -105,7 +105,7 @@
           "fitToContent":false,
           "propagate":false,
           "diagrams":[{
-              "id":"203b1f20845a493da641f10bc32511a6",
+              "id":"0f3469195b81438ca4999269c145efb1",
               "label":"State1",
               "type":"Axure:PanelDiagram",
               "objects":[],
@@ -120,15 +120,18 @@
               "adaptiveStyles":{
 }}]},
 {
-          "id":"8caddc4434814f9799cae10867a678a8",
-          "label":"Back",
+          "id":"ef6637a606aa44afa69d3820a7ac0eb0",
+          "label":"Schedule",
           "type":"dynamicPanel",
           "styleType":"dynamicPanel",
           "visible":true,
           "style":{
+            "location":{
+              "x":19,
+              "y":570},
             "size":{
-              "width":40,
-              "height":60}},
+              "width":121,
+              "height":30}},
           "adaptiveStyles":{
 },
           "interactionMap":{
@@ -139,18 +142,12 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"Open Schedule in Current Window",
+                      "description":"Open Link in Current Window",
                       "target":{
                         "targetType":"page",
-                        "url":"schedule.html",
                         "includeVariables":true},
-                      "linkType":"current"}]}]},
-            "onPanelStateChange":{
-              "description":"OnPanelStateChange",
-              "cases":[{
-                  "description":"Case 1",
-                  "isNewIfGroup":false,
-                  "actions":[{
+                      "linkType":"current"},
+{
                       "action":"linkWindow",
                       "description":"Open Schedule in Current Window",
                       "target":{
@@ -163,7 +160,7 @@
           "fitToContent":false,
           "propagate":false,
           "diagrams":[{
-              "id":"6a294f7eb86a4632a5d992d3a19306e1",
+              "id":"82901b700d2f4a4cae33da1442b42254",
               "label":"State1",
               "type":"Axure:PanelDiagram",
               "objects":[],
@@ -180,11 +177,11 @@
   "masters":{
 },
   "objectPaths":{
-    "7de4aac665434e2bb9454f928e4889b2":{
+    "445f015174c74b309780998cf882d72d":{
       "scriptId":"u0"},
-    "df49a48343c74072bb19e3f546fe89e2":{
+    "c581e310e7794e83ae477d4361d7deac":{
       "scriptId":"u1"},
-    "9529e27e644e43449c7cb25553e31a00":{
+    "36fa7536fd944895b9bd40886bd78bb5":{
       "scriptId":"u2"},
-    "8caddc4434814f9799cae10867a678a8":{
+    "ef6637a606aa44afa69d3820a7ac0eb0":{
       "scriptId":"u3"}}});
