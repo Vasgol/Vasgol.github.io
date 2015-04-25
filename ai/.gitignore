@@ -1,0 +1,8 @@
+*.class
+*.gfo
+*.hi
+*.o
+*.pyc
+__pycache__
+examples/*.json
+python/log.txt

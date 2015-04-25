@@ -1,0 +1,3 @@
+Add bugs Here!!!
+
+- object on the claw not taken into account
