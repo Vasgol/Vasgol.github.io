@@ -107,7 +107,7 @@ function loadExampleWorlds() {
             .appendTo($("#exampleworlds"));
         $.ajax({
             dataType: "json",
-            url: ExamplesFolder + "/" + name + ".json",
+            url: ExamplesFolder + "/" + "medium" + ".json",
             async: false
         }).fail(function(jqxhr, status, error) {
             alertError("Couldn't load example '" + name + "'.json: " + status, error);
