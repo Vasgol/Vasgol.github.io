@@ -1,352 +1,304 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <title>Untitled Document</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link type="text/css" href="resources/css/reset.css" rel="Stylesheet" />
-    <link type="text/css" href="resources/css/default.css" rel="Stylesheet" />
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Vasileios G. - UX Designer & Developer</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+       <script language="javascript"> 
+                function toggle(elementId, elementId2) {
+                    var ele = document.getElementById(elementId);
+                    if(ele.style.display == "none" && elementId2 == "myWorks") {
+                            ele.style.display = "block";
+                    }
+                    else{
+                              ele.style.display = "none";
+                    }
+                } 
+        </script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+        <!-- Add jQuery library -->
+        <script type="text/javascript" src="fancyBox/lib/jquery-1.10.1.min.js"></script>
 
-    <script type="text/javascript">
-        if (location.href.toString().indexOf('file://localhost/') == 0) {
-            location.href = location.href.toString().replace('file://localhost/', 'file:///');
-        }
-    </script>
-
-    <script type="text/javascript" src="resources/scripts/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="resources/scripts/player/splitter.js"></script>
-    <script type="text/javascript" src="resources/scripts/axutils.js"></script>
-    <script type="text/javascript" src="resources/scripts/player/axplayer.js"></script>
-    <script type="text/javascript" src="resources/scripts/messagecenter.js"></script>
-    <script type="text/javascript" src="data/document.js"></script>
-    <style type="text/css">
-
-#outerContainer {
-	width:1000px;
-	height:1500px;
-}
-
-.vsplitbar {
-	width: 3px;
-	background: #B9B9B9;
-}
-
-#rightPanel {
-    background-color: White;
-}
-
-#leftPanel {
-    /*min-width: 190px;*/
-}
-
-.splitterMask {
-   position:absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   overflow: hidden;
-   background-image: url(resources/images/transparent.gif);
-   z-index: 20000;
-}
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+        <link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 
 
-    </style>
-    <script type="text/javascript" language="JavaScript"><!--
-        // isolate scope
-        (function() {
-            setUpController();
-
-            var configuration = $axure.document.configuration;
-            var _settings = {};
-            _settings.projectId = configuration.prototypeId;
-            _settings.isAxshare = configuration.isAxshare;
-            _settings.loadFeedbackPlugin = configuration.loadFeedbackPlugin;
-            _settings.startCollapsed = HashString("c") == "1";
-
-            $axure.player.settings = _settings;
-
-            $(window).bind('load', function() {
-                if(CHROME_5_LOCAL && !$('body').attr('pluginDetected')) {
-                    window.location = 'resources/chrome/chrome.html';
-                }
-            });
-
+        <script type="text/javascript">
             $(document).ready(function() {
-                $axure.page.bind('load.start', mainFrame_onload);
-                $axure.messageCenter.addMessageListener(messageCenter_message);
+         
+                $("#fancybox-meet-guess").click(function() {
+                    $.fancybox.open([
+                        {
+                            href : 'images/MG/1.jpg',
+                        }, {
+                            href : 'images/MG/2.jpg',
+                        }, {
+                            href : 'images/MG/3.jpg'
+                        }
+                    ]);
+                });
+            
 
-                if($axure.player.settings.loadFeedbackPlugin) {
-                    if($axure.player.settings.isAxshare) {
-                        $axure.utils.loadJS('/Scripts/plugins/feedback/feedback.js');
-                    } else {
-                        $axure.utils.loadJS('http://share.axure.com/Scripts/plugins/feedback/feedback.js');
-                    }
-                }
-
-                if(navigator.userAgent.indexOf("MSIE") >= 0) $('#outerContainer').width('100%');
-                initialize();
-                if($axure.player.settings.startCollapsed) $('#outerContainer').splitter({ sizeLeft: 0 });
-                else $('#outerContainer').splitter({ sizeLeft: 250 });
-                $('#leftPanel').width(250);
-
-                $(window).resize(function() { resizeContent(); });
-
-                $('#maximizePanelContainer').hide();
-
-                initializeLogo();
-
-                $(window).resize();
-                resizeContent();
-                //wait for ie to get to a good state and resize
-                if($.browser.msie && $.browser.version == "6.0") setTimeout(function() { $('#outerContainer').trigger('resize'); }, 30);
-
-                if($axure.player.settings.startCollapsed) {
-                    collapse();
-                    $('#leftPanel').width(0);
-                }
+                $("#fancybox-virtual-kuggen").click(function() {
+                    $.fancybox.open([
+                        {
+                            href : 'images/VK/VK1.png',
+                        }, {
+                            href : 'images/VK/VK2.png',
+                        }, {
+                            href : 'images/VK/VK3.png',
+                        },
+                            {
+                            href : 'images/VK/VK4.jpg',
+                        },
+                            {
+                            href : 'images/VK/VK5.jpg',
+                        }
+                    ], {
+                        helpers : {
+                            thumbs : {
+                                width: 75,
+                                height: 50
+                            }
+                        }
+                    });
+                });
             });
-        })();
-
-        var lastLeftPanelWidth = 250;
-
-        function messageCenter_message(message, data) {
-            if(message == 'expandFrame') expand();
-        }
-
-        function resizeContent() {
-            var newHeight = $(window).height();
-            var newWidth = $(window).width();
-
-            var controlContainerHeight = newHeight - 42;
-            if($('#interfaceControlFrameLogoContainer').is(':visible')) controlContainerHeight -= $('#interfaceControlFrameLogoContainer').height() + 16;
-
-            $('#outerContainer').height(newHeight).width(newWidth);
-            $('.vsplitbar').height(newHeight);
-            $('#leftPanel').height(newHeight);
-            $('#interfaceControlFrame').height(newHeight);
-            $('#interfaceControlFrameContainer').height(controlContainerHeight);
-
-            $('#rightPanel').height(newHeight);
-            $('#mainFrame').height(newHeight);
-
-            if($('#leftPanel').is(':visible')) $('#rightPanel').width($(window).width() - $('#leftPanel').width() - $('.vsplitbar').width());
-            else $('#rightPanel').width($(window).width());
-        }
-
-        function closePlayer() {
-            if($axure.page.location) window.location.href = $axure.page.location;
-            else {
-                var pageFile = getInitialUrl();
-                var currentLocation = window.location.toString();
-                window.location.href = currentLocation.substr(0, currentLocation.lastIndexOf("/") + 1) + pageFile;
-            }
-        }
-
-        function replaceHash(newHash) {
-            var currentLocWithoutHash = window.location.toString().split('#')[0];
-
-            //We use replace so that every hash change doesn't get appended to the history stack.
-            //We use replaceState in browsers that support it, else replace the location
-            if (typeof window.history.replaceState != 'undefined') {
-                window.history.replaceState(null, null, currentLocWithoutHash + newHash);
-            } else {
-                window.location.replace(currentLocWithoutHash + newHash);
-            }
-        }
-
-        function collapse() {
-            var currentHash = window.location.hash;
-            //If the collapse hash string var isn't present and set to 1, insert it
-            if (currentHash.indexOf('#c=1') == -1 && currentHash.indexOf('&c=1') == -1) {
-                var hashToSet = '';
-
-                var varIndex = currentHash.indexOf('#c=');
-                if (varIndex == -1) varIndex = currentHash.indexOf('&c=');
-                if (varIndex != -1) {
-                    var newHash = currentHash.substring(0, varIndex);
-
-                    newHash = newHash == '' ? '#c=1' : newHash + '&c=1';
-
-                    var ampIndex = currentHash.indexOf('&', varIndex + 1);
-                    if (ampIndex != -1) {
-                        newHash = newHash + currentHash.substring(ampIndex);
-                    }
-                    hashToSet = newHash;
-                } else if (currentHash.indexOf('#') != -1) {
-                    hashToSet = currentHash + '&c=1';
-                } else {
-                    hashToSet = '#c=1';
-                }
-
-                if (hashToSet != '') {
-                    replaceHash(hashToSet);
-                }
-            }
-
-            $('#maximizePanelContainer').show();
-            lastLeftPanelWidth = $('#leftPanel').width();
-            $('#leftPanel').hide();
-            $('.vsplitbar').hide();
-            $('#rightPanel').width($(window).width());
-            $(window).resize();
-            $('#outerContainer').trigger('resize');
-        }
-
-        function expand() {
-            var currentHash = self.location.hash;
-            var varIndex = currentHash.indexOf('&c=');
-            if (varIndex == -1) varIndex = currentHash.indexOf('#c=');
-            //If the collapse hash string var is present, remove it
-            if (varIndex != -1) {
-                var newHash = currentHash.substring(0, varIndex);
-
-                var ampIndex = currentHash.indexOf('&', varIndex + 1);
-                if (ampIndex != -1) {
-                    newHash = newHash == '' ? '#' + currentHash.substring(ampIndex + 1) : newHash + currentHash.substring(ampIndex);
-                }
-
-                replaceHash(newHash);
-            }
-
-            $('#maximizePanelContainer').hide();
-            $('#leftPanel').width(lastLeftPanelWidth);
-            $('#leftPanel').show();
-            $('.vsplitbar').show();
-            $('#rightPanel').width($(window).width() - $('#leftPanel').width() - $('.vsplitbar').width());
-            $(window).resize();
-            $('#outerContainer').trigger('resize');
-        }
-
-        function initialize() {
-            var legacyQString = QueryString("Page");
-            if (legacyQString.length > 0) {
-                location.href = location.href.substring(0, location.href.indexOf("?")) + "#p=" + legacyQString;
-                return;
-            }
-
-            var mainFrame = document.getElementById("mainFrame");
-            mainFrame.contentWindow.location.href = getInitialUrl();
-        }
+            
+        </script>
         
-        function getInitialUrl() {
-            var pageName = HashString("p");
-            if(pageName.length > 0) return pageName + ".html";
-            else {
-                var url = getFirstPageUrl($axure.document.sitemap.rootNodes);
-                return (url ? url : "about:blank");
-            }
-        }
-
-        function getFirstPageUrl(nodes) {
-            for (var i = 0; i < nodes.length; i++) {
-                var node = nodes[i];
-                if (node.url) return node.url;
-                else {
-                    var hasChildren = (node.children && node.children.length > 0);
-                    if (hasChildren) {
-                        var url = getFirstPageUrl(node.children);
-                        if (url) return url;
-                    }
-                }
-            }
-            return null;
-        }
-
-        function initializeLogo() {
-            if($axure.document.configuration.logoImagePath) {
-                $('#interfaceControlFrameLogoImageContainer').html('<img id="logoImage" src="" />');
-                $('#logoImage').attr('src', $axure.document.configuration.logoImagePath).load(function() { resizeContent(); });
-                $('#interfaceControlFrameMinimizeContainer').css('background-color', '#FFFFFF');
-            } else $('#interfaceControlFrameLogoImageContainer').hide();
-
-            if ($axure.document.configuration.logoImageCaption) {
-                $('#interfaceControlFrameLogoCaptionContainer').html($axure.document.configuration.logoImageCaption);
-                $('#interfaceControlFrameMinimizeContainer').css('background-color', '#FFFFFF');
-            } else $('#interfaceControlFrameLogoCaptionContainer').hide();
-
-            if(!$('#interfaceControlFrameLogoImageContainer').is(':visible') && !$('#interfaceControlFrameLogoCaptionContainer').is(':visible')) {
-                $('#interfaceControlFrameLogoContainer').hide();
-            }
-        }
-
-        function mainFrame_onload() {
-            if($axure.page.pageName) document.title = $axure.page.pageName;
-        }
-
-        function QueryString(query) {
-            var qstring = self.location.href.split("?");
-            if(qstring.length < 2) return "";
-            return GetParameter(qstring, query);
-        }
         
-        function GetParameter(qstring, query) {
-            var prms = qstring[1].split("&");
-            var frmelements = new Array();
-            var currprmeter, querystr = "";
-
-            for(var i = 0; i < prms.length; i++) {
-                currprmeter = prms[i].split("=");
-                frmelements[i] = new Array();
-                frmelements[i][0] = currprmeter[0];
-                frmelements[i][1] = currprmeter[1];
-            }
-
-            for(j = 0; j < frmelements.length; j++) {
-                if(frmelements[j][0].toLowerCase() == query.toLowerCase()) {
-                    querystr = frmelements[j][1];
-                    break;
-                }
-            }
-            return querystr;
-        }
         
-        function HashString(query) {
-            var qstring = self.location.href.split("#");
-            if(qstring.length < 2) return "";
-            return GetParameter(qstring, query);
-        }
+    </head>
+    
+	<body class="main">
 
-    --></script>
+		<!-- Header -->
+			<div id="header" class="skel-layers-fixed">
 
-    <link type="text/css" rel="Stylesheet" href="plugins/sitemap/styles/sitemap.css" />
-    <script type="text/javascript" src="plugins/sitemap/sitemap.js"></script>
-    <link type="text/css" rel="Stylesheet" href="plugins/page_notes/styles/page_notes.css" />
-    <script type="text/javascript" src="plugins/page_notes/page_notes.js"></script>
+				<div class="top">
 
-</head>
-<body scroll="no">
-    <div id="outerContainer">
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar58"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Vasileios Golematis</h1>
+							<p align="right"> Interaction Designer & <br />Software Developer </p>
+						</div>
 
-        <div id="leftPanel">
-            <div id="interfaceControlFrame">
-                <div id="interfaceControlFrameMinimizeContainer">
-                    <a title="Minimize" id="interfaceControlFrameMinimizeButton" onclick="collapse();">&nbsp;</a>
-                    <div id="interfaceControlFrameCloseContainer">
-                        <a title="Close" id="interfaceControlFrameCloseButton" onclick="closePlayer();">&nbsp;</a>
-                    </div>
-                </div>
-                <div id="interfaceControlFrameLogoContainer">
-                    <div id="interfaceControlFrameLogoImageContainer"></div>
-                    <div id="interfaceControlFrameLogoCaptionContainer"></div>
-                </div>
-                <div id="interfaceControlFrameHeaderContainer">
-                    <ul id="interfaceControlFrameHeader">
-                    </ul>
-                </div>
-                <div id="interfaceControlFrameContainer">
-                </div>
-            </div>
-        </div>
-        <div id="rightPanel">
-            <iframe id="mainFrame" width="100%" height="100%" src="" frameborder="0" style="display: block;"></iframe>
-        </div>
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+							
+								Prologue's nav expects links in one of two formats:
+								
+								1. Hash link (scrolls to a different section within the page)
+								
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
 
-    </div>
+								2. Standard link (sends the user to another page/site)
 
-    <div id="maximizePanelContainer">
-        <iframe id="expandFrame" src="resources/expand.html" width="100%" height="100%" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
-    </div>
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+							
+							-->
+							<ul>
+								<li  id="myHome"><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li  id="myWorks"><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">My Projects</span></a></li>
+								<li  id="mySelf"><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+								<li  id="myContact"><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">
 
-</body>
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Hello dear visitor!<br /> Grab <a href="https://sweden.se/culture-traditions/fika/">fika</a>
+								and  make yourself at home</h2>
+								<p>Feel free to learn more things about me<br />
+								and take a look at my works!</p>
+							</header>
+							
+							<footer>								
+                                <a href="#about" class="button scrolly">About Me</a>
+                                <a href="#portfolio" class="button scrolly">My Works</a>
+							</footer>
+
+						</div>
+					</section>
+					
+				<!-- My projects -->
+					<section id="portfolio" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>My works</h2>
+							</header>
+							
+							<p>Check out some of my projects. More to come soon!</p>
+						
+                        
+							<div class="row">
+								<div class="4u">
+									<article class="item">										
+                                        <a class="image fit" id="fancybox-meet-guess" href="javascript:;"><img src="images/MG/Meet_Guess.jpg" alt="" /></a>
+										<header>
+											<h3>Meet & Guess</h3><h4><a href="https://github.com/juliaglas/meet-and-guess" target="blank">
+                                            Android App</a><h4>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/shrdlite.jpg" alt=""/></a>
+										<header>
+											<h3>Shrdlite</h3>
+                                            <h4><a href="http://localhost:8000/shrdlite.html">
+                                            Artificial Intelligence (Python Script)</a><h4>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a class="image fit" id="fancybox-virtual-kuggen" href="javascript:;"><img src="images/virtual_kuggen.jpg" alt="" /></a>
+										<header>
+											<h3>Virtual Kuggen</h3>
+                                            <h4><a href="#">
+                                            Tangible Interaction</a><h4>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/VolvoOnSchedule.jpg" alt="" /></a>
+										<header>
+											<h3>Volvo On Schedule</h3>
+                                            <h4><a href="#">
+                                            Design Concept on 'Car Personalization'</a><h4>
+										</header>
+									</article>                                
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a href="http://idxpo.se/current/gear-app/" target="_blank" class="image fit"><img src="images/bicycle.jpg" alt="" /></a>
+										<header>
+											<h3>Automated Bicycle Rooftop Storage</h3>
+                                            <h4><a href="#">
+                                            Design Concept on 'Smart homes'</a><h4>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/hyper_reality.jpg" alt="" /></a>
+										<header>
+											<h3>Hyper Reality</h3>
+                                            <h4><a href="#">
+                                            Simulation engine - Unity3d</a><h4>
+										</header>
+									</article>
+								</div>
+							</div>
+                            
+                            <footer>								
+                                <a href="./works.html"" class="button">See More</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="images/Me.jpg" alt=""/></a>
+							
+							<p>I am an Interaction Designer with a strong programming background, thirsty for engaging with challenging design issues: <strong>Understand</strong> the user,
+                               <strong> envision </strong> solutions, <strong> implement and evaluate </strong> in order to enhance user experience. 
+                               I focus on front-end development, computer graphics and gameplay design! </p>
+						</div>
+					</section>
+			
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>Would you like additional information about me? Please send me a message and
+                               I will contact you as soon as possible. Maybe we could have <a href="https://sweden.se/culture-traditions/fika/">fika</a>!</p>
+							
+							<form method="post" action="#">
+								<div class="row 50%">
+									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u"><input type="text" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+			
+			</div>
+
+            <!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; vasileios.me All rights reserved.</li><li>Design: Vasileios G.</li>
+					</ul>
+				
+			</div>
+
+	</body>
 </html>
