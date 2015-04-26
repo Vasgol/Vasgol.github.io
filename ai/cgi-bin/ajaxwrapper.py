@@ -27,7 +27,7 @@ from subprocess import Popen, PIPE, STDOUT
 
 # # Python
 SCRIPTDIR = 'python'
-SCRIPT = ['/usr/bin/python', 'shrdlite.py']
+SCRIPT = ['/Python27/python', 'shrdlite.py']
 
 ################################################################################
 

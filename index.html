@@ -19,21 +19,15 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+        <!-- a helper script for vaidating the contact form-->
+        <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
         <!-- Add fancyBox main JS and CSS files -->
         <script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
         <link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <!-- Add Thumbnail helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
         
-        <script language="javascript"> 
-                function toggle(elementId, elementId2) {
-                    var ele = document.getElementById(elementId);
-                    if(ele.style.display == "none" && elementId2 == "myWorks") {
-                            ele.style.display = "block";
-                    }
-                    else{
-                              ele.style.display = "none";
-                    }
-                } 
-        </script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -42,7 +36,12 @@
 
 
         <script type="text/javascript">
+            
             jQuery(document).ready(function() {
+            
+                $("#fancybox-hyper-reality").click(function() {
+                    $.fancybox.open('images/HR/HR1.jpg');
+                });
          
                 $("#fancybox-meet-guess").click(function() {
                     $.fancybox.open([
@@ -53,7 +52,14 @@
                         }, {
                             href : 'images/MG/3.jpg'
                         }
-                    ]);
+                    ], {
+                        helpers : {
+                            thumbs : {
+                                width: 75,
+                                height: 50
+                            }
+                        }
+                    });
                 });
             
 
@@ -81,11 +87,60 @@
                         }
                     });
                 });
+                
+                jQuery("#fancybox-gear-app").click(function() {
+                    $.fancybox.open([
+                        {
+                            href : 'images/GA/GA1.jpg',
+                        }, {
+                            href : 'images/GA/GA2.jpg',
+                        }, {
+                            href : 'images/GA/GA3.jpg',
+                        },
+                            {
+                            href : 'images/GA/GA4.jpg',
+                        }
+                    ], {
+                        helpers : {
+                            thumbs : {
+                                width: 75,
+                                height: 50
+                            }
+                        }
+                    });
+                });
+                
+                jQuery("#fancybox-volvo-schedule").click(function() {
+                    $.fancybox.open([
+                        {
+                            href : 'images/VS/VS1.jpg',
+                        }, {
+                            href : 'images/VS/VS2.jpg',
+                        }, {
+                            href : 'images/VS/VS3.jpg',
+                        }
+                    ], {
+                        helpers : {
+                            thumbs : {
+                                width: 75,
+                                height: 50
+                            }
+                        }
+                    });
+                });
             });
             
         </script>
         
-        
+        <script language="JavaScript">
+            $( document ).ready(function() {
+                var frmvalidator  = new Validator("contactform");
+                frmvalidator.addValidation("name","req","Please provide your name");
+                frmvalidator.addValidation("email","req","Please provide your email");
+                frmvalidator.addValidation("email","email",
+                "Please enter a valid email address");
+              })
+        </script>
         
     </head>
     
@@ -186,10 +241,10 @@
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/shrdlite.jpg" alt=""/></a>
+										<a href="ai/shrdlite.html" target="blank" class="image fit"><img src="images/shrdlite.jpg" alt=""/></a>
 										<header>
 											<h3>Shrdlite</h3>
-                                            <h4><a href="ai/shrdlite.html">
+                                            <h4><a href="https://bitbucket.org/pmai/project" target="blank">
                                             Artificial Intelligence (Python Script)</a><h4>
 										</header>
 									</article>
@@ -199,34 +254,34 @@
 										<a class="image fit" id="fancybox-virtual-kuggen" href="javascript:;"><img src="images/virtual_kuggen.jpg" alt="" /></a>
 										<header>
 											<h3>Virtual Kuggen</h3>
-                                            <h4><a href="#">
+                                            <h4><a href="http://ixdcth.se/courses/2014/ciu180/node/41" target="blank">
                                             Tangible Interaction</a><h4>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/VolvoOnSchedule.jpg" alt="" /></a>
+										<a id="fancybox-volvo-schedule" href="javascript:;" class="image fit"><img src="images/VolvoOnSchedule.jpg" alt="" /></a>
 										<header>
 											<h3>Volvo On Schedule</h3>
-                                            <h4><a href="#">
+                                            <h4><a href="vo/index.html" target="blank">
                                             Design Concept on 'Car Personalization'</a><h4>
 										</header>
 									</article>                                
 								</div>
 								<div class="4u">
 									<article class="item">
-										<a href="http://idxpo.se/current/gear-app/" target="_blank" class="image fit"><img src="images/bicycle.jpg" alt="" /></a>
+										<a class="image fit" id="fancybox-gear-app" href="javascript:;"><img src="images/bicycle.jpg" alt="" /></a>
 										<header>
 											<h3>Automated Bicycle Rooftop Storage</h3>
-                                            <h4><a href="#">
+                                            <h4><a href="http://idxpo.se/current/gear-app/" target="_blank" >
                                             Design Concept on 'Smart homes'</a><h4>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/hyper_reality.jpg" alt="" /></a>
+										<a id="fancybox-hyper-reality" href="javascript:;" class="image fit"><img src="images/hyper_reality.jpg" alt="" /></a>
 										<header>
 											<h3>Hyper Reality</h3>
-                                            <h4><a href="#">
-                                            Simulation engine - Unity3d</a><h4>
+                                            <h4><a href="https://bitbucket.org/vasgol/simulation-engines-project" target="_blank">
+                                            Simulation engine - Unity3d, C#,  CG-shaders</a><h4>
 										</header>
 									</article>
 								</div>
@@ -266,7 +321,7 @@
 							<p>Would you like additional information about me? Please send me a message and
                                I will contact you as soon as possible. Maybe we could have <a href="https://sweden.se/culture-traditions/fika/">fika</a>!</p>
 							
-							<form method="post" action="#">
+							<form method="post" name="contactform" action="form.php">
 								<div class="row 50%">
 									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="6u"><input type="text" name="email" placeholder="Email" /></div>
@@ -281,8 +336,7 @@
 										<input type="submit" value="Send Message" />
 									</div>
 								</div>
-							</form>
-
+                            </form>
 						</div>
 					</section>
 			
